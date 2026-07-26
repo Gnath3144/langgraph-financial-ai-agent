@@ -1,6 +1,6 @@
 # 05_human_in_loop.py
 import sys, types
-m = types.ModuleType('uuid_utils'); m.compat = types.ModuleType('uuid_utils.compat'); m.compat.uuid7 = lambda: None; sys.modules['uuid_utils'] = m; sys.modules['uuid_utils.compat'] = m.compat
+m = types.ModuleType('uuid_utils'); m.compat = types.ModuleType('uuid_utils.compat'); m.compat.uuid7 = lambda: __import__('uuid').uuid4(); sys.modules['uuid_utils'] = m; sys.modules['uuid_utils.compat'] = m.compat
 
 import sqlite3
 from langgraph.graph import StateGraph, START, END

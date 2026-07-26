@@ -1,6 +1,6 @@
 # 04_tools_demo.py
 import sys, types
-m = types.ModuleType('uuid_utils'); m.compat = types.ModuleType('uuid_utils.compat'); m.compat.uuid7 = lambda: None; sys.modules['uuid_utils'] = m; sys.modules['uuid_utils.compat'] = m.compat
+m = types.ModuleType('uuid_utils'); m.compat = types.ModuleType('uuid_utils.compat'); m.compat.uuid7 = lambda: __import__('uuid').uuid4(); sys.modules['uuid_utils'] = m; sys.modules['uuid_utils.compat'] = m.compat
 
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
