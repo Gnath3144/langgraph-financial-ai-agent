@@ -47,5 +47,5 @@ streamlit run demo/app.py
 
 ## Run Unit Tests
 ```bash
-python -m pytest tests
+python -m pytest -p no:langsmith tests
 ```
