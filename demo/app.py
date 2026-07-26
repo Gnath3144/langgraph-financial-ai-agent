@@ -1,5 +1,8 @@
 import streamlit as st
 import uuid
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from langchain_core.messages import HumanMessage, AIMessage
 from src.agent.graph import build_financial_agent
 
@@ -102,4 +105,3 @@ with col2:
             st.write("**Current state values:**")
             st.write(state_data.values.get("profile", {}))
             st.write(state_data.values.get("goals", []))
-""")
