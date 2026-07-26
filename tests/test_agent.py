@@ -19,8 +19,9 @@ def test_reducers():
     assert "Buy house" in res_g
 
 def test_graph_interrupt():
+    import uuid
     graph = build_financial_agent()
-    config = {"configurable": {"thread_id": "test-thread"}}
+    config = {"configurable": {"thread_id": str(uuid.uuid4())}}
     
     # Query that triggers advice and human interrupt
     inputs = {
