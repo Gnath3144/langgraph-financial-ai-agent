@@ -1,5 +1,7 @@
 # Presentation slides generation helper
 import os
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 import build_utils
 
 slides_data = [
